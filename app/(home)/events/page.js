@@ -3,8 +3,9 @@
 import React, { useEffect, useState } from "react";
 import EventCard from "@/components/EventCard";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
-export default function EventsPage() {
+function EventsContent() {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const searchParams = useSearchParams();
@@ -79,5 +80,13 @@ export default function EventsPage() {
       </div>
 
     </div>
+  );
+}
+
+export default function EventsPage() {
+  return (
+    <Suspense fallback={<p className="text-center mt-10">Loading filters...</p>}>
+      <EventsContent />
+    </Suspense>
   );
 }
