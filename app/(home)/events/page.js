@@ -1,6 +1,3 @@
-// export default function EventsPage() {
-//   return <h1>Events Page</h1>;
-// }
 "use client";
 
 import React, { useEffect, useState } from "react";

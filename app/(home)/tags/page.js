@@ -1,6 +1,3 @@
-// export default function TagsPage() {
-//   return <h1>Tags Page</h1>;
-// }
 "use client";
 
 import React, { useEffect, useState } from "react";
